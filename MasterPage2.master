@@ -1,0 +1,103 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            background-image:url('footer1.jpg');
+        }
+        .auto-style2 {
+            width: 168px;
+        }
+        .auto-style3 {
+            width: 551px;
+            height: 130px;
+        }
+        .a {
+            width: 225px;
+            height: 217px;
+        }
+    </style>
+</head>
+<body>
+    <div><table class="auto-style1">
+	<tr>
+            <td class="auto-style2">
+                <img alt="logo" class="a" src="duonlinehelppng.png" /></td>
+            <td align="center"> 
+                <asp:Label ID="header" runat="server" Text="ONLINE HELP DESK" Font-Bold="True" Font-Size="90px" ForeColor="#CE1515"></asp:Label>
+            </td>
+        </tr>
+    </table>
+  
+   <form id="form1" runat="server">
+       <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+        <table class="auto-style1">
+                <tr>
+                    
+                         <td class="auto-style7" colspan="4">
+                        <asp:Menu ID="Menu1" runat="server"  DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="Medium" ForeColor="#666666" Orientation="Horizontal" RenderingMode="Table" StaticSubMenuIndent="10px" Width="300px" Font-Bold="True" Height="50px">
+                            <DynamicHoverStyle BackColor="White" ForeColor="Black" />
+                            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" ForeColor="White" />
+                            <DynamicMenuStyle BackColor="#CE1515" ForeColor="White" />
+                            <DynamicSelectedStyle BackColor="White" ForeColor="Black" />
+                            <StaticMenuItemStyle BackColor="#CE1515" ForeColor="White" BorderStyle="Solid" BorderColor="Black" BorderWidth="5px" ItemSpacing="40px"  Height="90%" />
+                           <StaticHoverStyle BackColor="White" ForeColor="Black" />
+                            <StaticMenuStyle BackColor="Black" />
+                            <Items>
+                                <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/employeehome.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="New Requests" Value="Login" NavigateUrl="~/employeenewrequest.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Pending " Value="Pending Request" NavigateUrl="~/employeependingrequest.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Replied " Value="Replied Request" NavigateUrl="~/employeerepliedrequest.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Admin Replies " Value="Admin Replies" NavigateUrl="~/adminreplies.aspx" ></asp:MenuItem>
+                                <asp:MenuItem Text="Deleted " Value="Deleted Request" NavigateUrl="~/employeedeletedrequest.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Forwarded" Value="Forwarded" NavigateUrl="~/employeeforwardedrequest.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Sign Out" Value="Sign Out" NavigateUrl="~/emplogout.aspx"></asp:MenuItem>
+                                 <asp:MenuItem Text="Change Password" Value="Change Password" NavigateUrl="~/empchange.aspx"></asp:MenuItem>
+                            </Items>
+                            <StaticHoverStyle BackColor="#666666" ForeColor="White" />
+                            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <StaticMenuStyle Width="100%" />
+                            <StaticSelectedStyle BackColor="#1C5E55" />
+                        </asp:Menu>
+                             
+                    </td>
+                    
+                </tr>
+            </table>
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+          
+        </asp:ContentPlaceHolder>
+        
+                 <hr style="border: thick solid #000000; font-size: xx-large" />
+ 
+    <table class="auto-style1">
+        <tr style="height:250px">
+            <td>
+                 <asp:LinkButton ID="LinkButton1" runat="server">UIC</asp:LinkButton><br /><br />
+                <asp:LinkButton ID="LinkButton2" runat="server">DUCC</asp:LinkButton><br /><br />
+                <asp:LinkButton ID="LinkButton3" runat="server">CIC</asp:LinkButton><br /><br />
+                <asp:LinkButton ID="LinkButton4" runat="server">SOL</asp:LinkButton><br />
+            </td>
+            <td align="right">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.9540406506717!2d77.21200181449638!3d28.6910213881833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0xbc3cf303081a7144!2sCluster+Innovation+Centre!5e0!3m2!1sen!2sin!4v1466577641401" width="400" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </td>
+        </tr>
+    </table>
+ 
+
+    </div>
+    </form>
+</body>
+</html>
